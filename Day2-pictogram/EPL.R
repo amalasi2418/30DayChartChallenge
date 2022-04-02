@@ -43,27 +43,23 @@ EPL_df <- EPL_win %>% mutate(Year = as.character(case_when(
   ))
 
 
-asp_ratio <- 1.2 
+asp_ratio <- 1.1 
 
-EPL_df %>% ggplot(aes(id,Year))+geom_point()
-
-EPL_df %>% ggplot(aes(id,Year))+geom_image(aes(image="~/R/30DayChartChallenge/Day2-pictogram/logos/Liverpool_FC.png"))
-
-plot <- EPL_df %>% ggplot(aes(id*asp_ratio,Year))+
+EPL_df %>% ggplot(aes(id*asp_ratio,Year))+
   geom_image(aes(image=logo),size=.09) +
   labs(title="30 years of English Premier League",
        caption = "Source: English Premier League | Logos: Wikipedia | Graphic: Abhinav Malasi",
-       subtitle = "<span style = 'color:#DA291C;'>Manchester United</span> had dominated the Premier League since its<br>inception, but in the last decade their derby rivals, <span style = 'color:#6CABDD;'>Manchester City</span>,<br>have been ruling the league table. The winner of each season are<br>represented by their logos. The tropy represents ongoing season." )+
-  xlab("")+ylab("") + xlim(0.8,12)+
+       subtitle = "<span style = 'color:#DA291C;'>Manchester United</span> had dominated the Premier League since its<br>inception, but in the last decade their derby rivals, <span style = 'color:#6CABDD;'>Manchester<br>City</span>, have been ruling the league table. The winner of each season<br>are represented by their logos. The trophy represents ongoing<br>season." )+
+  xlab("")+ylab("") + xlim(0.8,11)+
   #scale_y_discrete(expand = c(0, 1.5))+
-  scale_y_discrete(expand = expansion(mult = 1))+
+  scale_y_discrete(expand = expansion(mult = .9))+
   #coord_fixed(ratio=.5)+
   theme(panel.background = element_rect(color="#141414",fill="#141414"),
         plot.background = element_rect(color="#141414",fill="#141414"),
         aspect.ratio = 1/asp_ratio,
-        plot.margin = margin(c(-10,10,0,10), unit = "mm"),
-        plot.title = element_text(size=140,face="bold",margin = margin(t=15,b=-65)),
-        plot.subtitle = element_markdown(lineheight=.35,size=70,margin = margin(t=120,b=-120)),
+        plot.margin = margin(c(-10,20,0,10), unit = "mm"),
+        plot.title = element_text(size=120,face="bold",margin = margin(t=15,b=-65)),
+        plot.subtitle = element_markdown(lineheight=.35,size=70,margin = margin(t=120,b=-120,r=5)),
         plot.caption = element_text(size=40,margin = margin(t=-105,b=-60)),
         text = element_text(family = "Bitter",color="white"),
         panel.grid = element_blank(),
@@ -71,8 +67,5 @@ plot <- EPL_df %>% ggplot(aes(id*asp_ratio,Year))+
         axis.ticks = element_blank(),
         axis.text.x = element_blank()) 
 
-# plot +labs(title="30 years of English Premier League",
-#         caption = "Source: English Premier League | Logos: Wikipedia | Graphic: Abhinav Malasi",
-#         subtitle = "" )
 
 ggsave("EPL.png", last_plot(), width = 10*asp_ratio, height = 10, units = "in")
