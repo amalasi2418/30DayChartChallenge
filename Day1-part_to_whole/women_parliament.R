@@ -1,4 +1,4 @@
-setwd("~/R/Infographics/30daysChartChallenge/day1")
+setwd("~/R/30DayChartChallenge/Day1-part_to_whole")
 
 library(tidyverse)
 library(tidyr)
@@ -102,4 +102,4 @@ parliament %>%
         axis.ticks = element_blank())
 
 
-ggsave("women_in_parliament1.png",last_plot(),width = 6, height=4, units = "in")
+ggsave("women_in_parliament.png",last_plot(),width = 6, height=4, units = "in")
