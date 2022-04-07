@@ -18,8 +18,8 @@ literacy_long %>% ggplot(aes(Year, rate/100, fill=type)) +
   xlab("") + ylab("") +
   scale_y_continuous(expand = c(0,0), labels = scales::percent) +
   scale_x_continuous(expand = c(0,0)) +
-  annotate("text", x = 1875, y = .75, label = "Illiterate world popuation",col="#EEEEEE",size=8,family = "cond") +
-  annotate("text", x = 1975, y = .25, label = "Literate world popuation",col="#EEEEEE",size=8,family = "cond") +
+  annotate("text", x = 1875, y = .75, label = "Illiterate world population",col="#EEEEEE",size=8,family = "cond") +
+  annotate("text", x = 1975, y = .25, label = "Literate world population",col="#EEEEEE",size=8,family = "cond") +
   scale_fill_manual(values = c("#541212","#8B9A46")) +
   labs(title = "Evolution of global literacy",
        subtitle = "The collected data is spanning between 1800 till 2016 for population 15 years or older.",
