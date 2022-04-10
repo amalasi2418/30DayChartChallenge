@@ -75,7 +75,7 @@ waste_total %>% filter(!is.na(food_supply_stage)) %>%
   #scale_fill_viridis(option="mako",begin=.1,discrete = "TRUE")+
   #scale_color_viridis(option="mako",begin=.1,discrete = "TRUE")+
   labs(title = "Food loss along the global supply chain",
-       subtitle = "The data depicts the food loss measured between 2000 till 2021 across the\ndifferent stages of the food supply chain. It is interesting to note that\nmost of the waste occurs at household level.",
+       subtitle = "The data depicts the food loss measured between 2000 and 2021 across the\ndifferent stages of the food supply chain. It is interesting to note that\nmost of the waste occurs at household level.",
        caption = "Data: Food and Agriculture Organization of UN | Graphic: Abhinav Malasi")+
   theme(panel.grid = element_blank(),
         panel.background = element_rect(color="#191919",fill="#191919"),
