@@ -25,7 +25,7 @@ df %>% ggplot(aes(time, suicide/310)) + geom_line(color="#0072B2", size=1) +
   geom_point(color="#0072B2", size=2) +
   geom_line(aes(time,science),color="#C91D42", size=1)+
   geom_point(aes(time,science),color="#C91D42", size=2) +
-  annotate(geom = "text", x= 2000, y =29,label="The budget is in billion $\nand is scaled down by a\nfactor of 310.", lineheight=.35,family="Varta",size=5) +
+  annotate(geom = "text", x= 2000, y =29,label="The budget is in billion $\nand suicides are scaled\ndown by a factor of 310.", lineheight=.35,family="Varta",size=5) +
   labs(title = "Correlation doesnot imply causation",
        subtitle = "The correlation between US spending on science and suicides\nby hanging is 99.21%. ",
        caption = "Inspiration: https://www.tylervigen.com\nData: U.S. Office of Management and Budget, Centers for Disease Control & Prevention\nGraphic: Abhianv Malasi") +
@@ -41,6 +41,6 @@ df %>% ggplot(aes(time, suicide/310)) + geom_line(color="#0072B2", size=1) +
         axis.title.y = element_markdown(size=20))
 
 
-ggsave("correlation.png", last_plot(), width = 4, height=3, units="in")
+ggsave("correlation1.png", last_plot(), width = 4, height=3, units="in")
 
 
