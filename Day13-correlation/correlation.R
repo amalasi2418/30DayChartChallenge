@@ -28,7 +28,7 @@ df %>% ggplot(aes(time, suicide/310)) + geom_line(color="#0072B2", size=1) +
   annotate(geom = "text", x= 2000, y =29,label="The budget is in billion $\nand suicides are scaled\ndown by a factor of 310.", lineheight=.35,family="Varta",size=5) +
   labs(title = "Correlation doesnot imply causation",
        subtitle = "The correlation between US spending on science and suicides\nby hanging is 99.21%. ",
-       caption = "Inspiration: https://www.tylervigen.com\nData: U.S. Office of Management and Budget, Centers for Disease Control & Prevention\nGraphic: Abhianv Malasi") +
+       caption = "Inspiration: https://www.tylervigen.com\nData: U.S. Office of Management and Budget, Centers for Disease Control & Prevention\nGraphic: Abhinav Malasi") +
   xlab("") + ylab("<span style = 'color:#0072B2;'>US spending on science</span> / <span style = 'color:#C91D42;'>Suicides by hanging</span>") +
   scale_x_continuous(breaks = 1999:2009, labels = 1999:2009)+
   theme(text=element_text(family = "Varta"),
