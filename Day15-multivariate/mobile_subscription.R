@@ -1,8 +1,9 @@
-setwd("~/R/Infographics/30daysChartChallenge/day15")
+setwd("~/R/30DayChartChallenge/Day15-multivariate")
 
 library(tidyverse)
 library(countrycode)
 library(ggthemes)
+library(ggtext)
 library(showtext)
 
 showtext_auto()
@@ -34,7 +35,7 @@ mobile_2019 %>%
   xlab("GDP per capita (adjusted US $, log scale)") + 
   ylab("Mobile subscription per 100 person")+
   labs(title = "Mobile technology adoption in 2019",
-       subtitle = "The mobile subscription per 100 person correlates linearly\nwith the GDP per capita of the country. Hong Kong has the\nhighest mobile subscription per 100 person.\nThe bubbles are sized by population.",
+       subtitle = "The mobile subscription per 100 person has a positive correlation<br>with the GDP per capita of the country. Hong Kong has the highest<br>mobile subscription per 100 person.<br>*Bubbles are sized by population*.",
        caption = "Data: Our World In Data | Graphic: Abhinav Malasi",
        size = NULL,
        color = NULL) +
@@ -57,7 +58,7 @@ mobile_2019 %>%
         plot.margin = margin(c(10,10,5,10)),
         plot.title = element_text(size=50),
         plot.title.position = "plot",
-        plot.subtitle = element_text(size=30, lineheight = .35, margin=margin(t=10)),
+        plot.subtitle = element_markdown(size=30, lineheight = .35, margin=margin(t=10)),
         plot.caption = element_text(size=20, margin = margin(t=10)),
         panel.background = element_rect(color="#FFFFFF",fill="#FFFFFF"),
         plot.background = element_rect(color="#FFFFFF",fill="#FFFFFF")) 
