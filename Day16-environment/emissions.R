@@ -2,6 +2,7 @@ setwd("~/R/Infographics/30daysChartChallenge/day16")
 
 library(tidyverse)
 library(showtext)
+library(ggtext)
 
 showtext_auto()
 
@@ -23,7 +24,7 @@ emissions %>%
   xlab("") + ylab("") +
   geom_text(aes(x=3, y=1, label=""), vjust=-1)+
   labs(title = "Carbon footprint linked to deforestation for food production",
-       subtitle = "Average per capita CO??? emissions for the period from 2010 to 2014 linked to\ndeforestation for food production. It reflects the carbon footprint of country's diet.",
+       subtitle = "Average per capita CO??? emissions for the period from 2010 to 2014 linked to<br>deforestation for food production. It reflects the carbon footprint of country's diet.<br>*t denotes tonnes*.",
        caption = "Data: Our World In Data | Graphic: Abhinav Malasi") +
   scale_x_continuous(expand = c(-0.1,.35)) +
   theme(panel.background = element_rect(color = "#141414", fill="#141414"),
@@ -31,7 +32,7 @@ emissions %>%
         panel.grid = element_blank(),
         plot.margin = margin(c(15,30,10,20)),
         plot.title = element_text(size = 40),
-        plot.subtitle = element_text(size = 28, lineheight = .35, margin = margin(t=5, b=10)),
+        plot.subtitle = element_markdown(size = 28, lineheight = .35, margin = margin(t=5, b=10)),
         plot.title.position = "plot",
         plot.caption = element_text(size = 20),
         axis.ticks = element_blank(),
