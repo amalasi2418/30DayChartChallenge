@@ -53,7 +53,7 @@ height %>% ggplot(aes(Year,height, group = Entity)) +
         plot.margin = margin(c(15,5,5,10)),
         axis.text = element_text(size = 20,color = "#06113C"),
         axis.title.y = element_text(size = 30),
-        strip.text = element_text(size = 25),
+        strip.text = element_text(size = 25,color = "#06113C"),
         strip.background = element_rect(color="#EEEEEE",fill="#EEEEEE"),
         text = element_text(color = "#06113C", family = "Outfit"))
 
