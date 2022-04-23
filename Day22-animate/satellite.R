@@ -75,7 +75,7 @@ anim <- launch %>%
   ggplot(aes(year, tot, group = continent)) +
   geom_line(size=1,color = "#A2B38B") +
   labs(title = "Who has satellites?",
-       subtitle = "Out of 4852 satellites launched till 31st December 2021, USA have 2944.",
+       subtitle = "Out of 4852 satellites launched till 31st December 2021, the USA has 2944.",
        caption = "Data: www.ucsusa.org | Graphic: Abhinav Malasi") +
   xlab("") + ylab("Total satellites") +
   geom_text(aes(x=year,y=tot), label = "|-o-|", size=8,color="#A2B38B") +
@@ -106,5 +106,5 @@ anim
 ggsave("sat1.png",anim, width = 1200, height = 1200,dpi=200, units = "px")
 
 animate(anim, 100, fps = 10,  width = 1000, height = 1000,
-        renderer = gifski_renderer("gganim5.gif"))
+        renderer = gifski_renderer("gganim.gif"))
 
