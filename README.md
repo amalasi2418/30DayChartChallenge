@@ -20,14 +20,13 @@ Submissions to the [#30DayChartChallenge](https://30daychartchallenge.org/)
 ![](Day5-slope/extinction_v6.png)  
 
 ## Day 6: OWID
-[](Day6-OWID/literacy2.png)  
+![](Day6-OWID/literacy2.png)  
 
-# Distributions
 ## Day 7: physical
 ![](Day7-physical/climate_change_effect_birds4.png)  
 
 ## Day 8: mountains
-![](Day8-mountains/Belgium_ alcohol_consumption.png)  
+![](Day8-mountains/Belgium_alcohol_consumption.png)  
 
 ## Day 9: statistics
 ![](Day9-statistics/supply_chain.png)  
