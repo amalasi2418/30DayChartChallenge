@@ -40,7 +40,6 @@ Submissions to the [#30DayChartChallenge](https://30daychartchallenge.org/)
 ## Day 12: economist
 ![](Day12-economist/food_price_index.png)  
 
-# Relationships
 ## Day 13: correlation
 ![](Day13-correlation/correlation.png)  
 
@@ -75,4 +74,8 @@ Submissions to the [#30DayChartChallenge](https://30daychartchallenge.org/)
 ![](Day23-tiles/DPT_immunization1.png)  
 
 ## Day 24: financial times
-![](Day24-FT/working_age.png)  
+![](Day24-FT/working_age.png)
+
+## Day 25: trend
+![](Day25-trend/trend.png)
+
