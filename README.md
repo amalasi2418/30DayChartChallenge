@@ -80,7 +80,7 @@ Submissions to the [#30DayChartChallenge](https://30daychartchallenge.org/)
 ![](Day25-trend/trend.png)
 
 ## Day 26: intercative
-![](Day26-interactive/interactive.mp4)
+![video](Day26-interactive/interactive.mp4)
 
 ## Day 27: future
 ![](Day27-future/macroplastics.png)
