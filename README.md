@@ -79,3 +79,18 @@ Submissions to the [#30DayChartChallenge](https://30daychartchallenge.org/)
 ## Day 25: trend
 ![](Day25-trend/trend.png)
 
+## Day 26: intercative
+![](Day26-interactive/interactive.mp4)
+
+## Day 27: future
+![](Day27-future/macroplastics.png)
+
+## Day 28: deviation
+![](Day28-deviation/deviation_v1_7.png)
+
+## Day 29: storytelling
+![](Day29-storytelling/story4.png)
+
+## Day 30: UN populatoin
+![](Day30-UN_population/UN_data3.png)
+
