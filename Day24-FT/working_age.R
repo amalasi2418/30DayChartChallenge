@@ -1,4 +1,4 @@
-setwd("~/R/Infographics/30daysChartChallenge/day24")
+setwd("~/R/30DayChartChallenge/Day24-FT")
 
 library(tidyverse)
 library(showtext)
@@ -28,7 +28,7 @@ annotate_npc <- function(x, y, height, width, ...) {
   ))
 }
 
-png("working_age.png", width=5, height=5,unit='in', res = 300)
+png("working_age1.png", width=5, height=5,unit='in', res = 300)
 
 
 working_age %>% ggplot(aes(TIME, Value, group=LOCATION)) +
@@ -44,7 +44,7 @@ working_age %>% ggplot(aes(TIME, Value, group=LOCATION)) +
   annotate(geom = "text", x=1955, y=58, label="World", size=10,color="#FF9F24",family = "Outfit")+
   #annotate(geom = "text", x=1955, y=72, label="Percent Population", size=10,color="#FF9F24",family = "Outfit")+
   scale_color_manual(values = c("#008AD7","#B82D5C","#8EC359","#FF9F24"))+
-  scale_y_continuous(breaks = seq(50,70,5), labels = seq(50,70,5), expand = c(0,0)) +
+  scale_y_continuous(breaks = seq(50,70,5), labels = paste0(seq(50,70,5),"%"), expand = c(0,0)) +
   scale_x_continuous(expand = c(0,0)) +
   coord_cartesian(clip = "off") +
   theme(panel.grid.major.y = element_line(color="#D9D0CD"),
