@@ -1,8 +1,9 @@
-setwd("~/R/Infographics/30daysChartChallenge/day23")
+setwd("~/R/30DayChartChallenge/Day23-tiles")
 
 library(tidyverse)
 library(showtext)
 library(RColorBrewer)
+library(countrycode)
 
 showtext_auto()
 
@@ -20,14 +21,16 @@ child$Continent <- countrycode(sourcevar = child$Entity,
                                      destination = "continent")
 
 
-child %>% filter(!is.na(Continent)) %>% filter(!is.na(mortality)) %>% #filter(Year>1999) %>%
+plot<-child %>% filter(!is.na(Continent)) %>% 
+  filter(!is.na(mortality)) %>% #filter(Year>1999) %>%
   ggplot() +
   geom_tile(aes(Year,Entity,fill=mortality)) + 
   # geom_dl(aes(label = country), method = list(dl.trans(x = x + 0.2),
   #                                                        "last.points", cex = 0.8)) +
   #geom_label_repel(aes(label = as.factor(country)),nudge_x = 1, na.rm = TRUE) +
   xlab("") + ylab("")+
-  labs(title = "Immunization of children against DPT",
+  labs(title="Children mortality due to lack of immunization against DPT vaccination",
+       #title = "Immunization of children against DPT",
        #subtitle = "Visualized the mortality rate of children under 5 per 1000 live births.",
        caption = "Data: OurWorldInData | Graphic: Abhinav Malasi") +
   #scale_fill_gradientn(colours = c("green","yellow","orange","red"), name = "Mortality rate for children\nunder 5 per 1000 live births", limits =c(0,41), labels = paste0(seq(0,40,10),"%"))+
@@ -56,5 +59,5 @@ child %>% filter(!is.na(Continent)) %>% filter(!is.na(mortality)) %>% #filter(Ye
                                barheight = 1.25)) +
   facet_wrap(~Continent, scales = "free", nrow = 1)
 
-ggsave("DPT_immunization1.png", last_plot(), width = 16, height = 10, units = "in")
+ggsave("DPT_immunization2.png", plot, width = 16, height = 10, units = "in")
 
