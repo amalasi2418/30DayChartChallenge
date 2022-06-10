@@ -67,4 +67,4 @@ consumption %>% filter(Entity == "Belgium") %>%
 
 
 
-ggsave("Belgium_ alcohol_consumption.png", last_plot(), width = 6, height = 4, units = "in")
+ggsave("Belgium_alcohol_consumption.png", last_plot(), width = 6, height = 4, units = "in")
