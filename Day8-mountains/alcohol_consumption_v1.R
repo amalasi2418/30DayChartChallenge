@@ -1,4 +1,4 @@
-setwd("~/R/Infographics/30daysChartChallenge/day8")
+setwd("~/R/30DayChartChallenge/Day8-mountains")
 
 library(tidyverse)
 library(patchwork)
@@ -38,7 +38,7 @@ consumption %>% filter(Entity == "Belgium") %>%
   scale_x_continuous(expand = c(0,0))+
   scale_y_continuous(expand = c(0,0))+
   labs(title = "Alcohol consumption habits of Belgians",
-       subtitle = "According to the avergae annual per capita alcohol consuption, measured in liters of pure  alcohol, Belgium ranked 28\nin 2022. The global average being 5.7.",
+       subtitle = "According to the average annual per capita alcohol consumption, measured in liters of pure alcohol, Belgium ranked 28\nin 2022. The global average being 5.7.",
        caption = "Data: Our World In Data | Graphic: Abhinav Malasi") +
   #geom_text(data = annotate_country,aes (label =label))+
   #facet_wrap(~Alcohol, ncol=1) +
@@ -67,4 +67,4 @@ consumption %>% filter(Entity == "Belgium") %>%
 
 
 
-ggsave("Belgium_ alcohol_consumption1.png", last_plot(), width = 6, height = 4, units = "in")
+ggsave("Belgium_ alcohol_consumption.png", last_plot(), width = 6, height = 4, units = "in")
