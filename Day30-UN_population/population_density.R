@@ -1,4 +1,4 @@
-setwd("~/R/Infographics/30daysChartChallenge/day30")
+setwd("~/R/30DayChartChallenge/Day30-UN_population")
 
 library(tidyverse)
 library(rnaturalearth)
@@ -42,7 +42,7 @@ df %>% mutate(range = case_when(pop_density<=25 ~"0-25",
                                 TRUE ~ "1500-9000")) %>%
   mutate(range = fct_relevel(factor(range, levels = c("0-25","25-75","75-150","150-300","300-500","500-700","700-1500","1500-9000")))) %>%
   ggplot() +
-  geom_sf(aes(fill=fct_relevel(range)),size=.3) +
+  geom_sf(aes(fill=fct_relevel(range)),size=.1,color="#141414") +
   scale_fill_brewer(palette = "Reds", na.value = "NA",direction=1, name="Persons per\nsquare km",
                     guide = guide_legend(
                       label.position = "bottom",
@@ -60,11 +60,12 @@ df %>% mutate(range = case_when(pop_density<=25 ~"0-25",
         legend.text = element_text(size=20, hjust=-.5),
         legend.title = element_text(size=20,vjust=.9,lineheight = .35, margin = margin(b=-10)),
         legend.key.size = unit(.3,"cm"),
+        legend.key = element_rect(color="#141414"),
         plot.margin = margin(t=-5,b=-10,r=10),
-        legend.background = element_rect(color="aliceblue",fill="aliceblue"),
-        plot.background = element_rect(color="aliceblue",fill="aliceblue"),
-        panel.background = element_rect(color="aliceblue",fill="aliceblue"),
-        text = element_text(family = "Eczar"))
+        legend.background = element_rect(color="#141414",fill="#141414"),
+        plot.background = element_rect(color="#141414",fill="#141414"),
+        panel.background = element_rect(color="#141414",fill="#141414"),
+        text = element_text(family = "Eczar",color="white"))
 
 
 ggsave("UN_data3.png",last_plot(), width=6,height = 3.5, dpi=300, units = "in")
